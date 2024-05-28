@@ -153,6 +153,8 @@ The 'print' function prints information onto the terminal. It is very useful for
 
 <img width="763" alt="console showing 'All learners - 3, Active Learners -2'" src="https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/eb952c39-3ccd-423f-95c0-83798875410b">
 
+### All Active Learners within a time frame
+
 Getting all of the active learners is very similar. We just used the get_active_learners_by_invite_date function instead. 
 
 ~~~ python
@@ -165,6 +167,8 @@ print(len(active_learners))
 #this function creates a CSV named '0_example_export_active_learners' using the list active_learners
 export_learners_with_assessments_to_csv(active_learners, '0_example_export_active_learners.csv')
 ~~~
+
+### Learners within a time frame with specific tags 
 
 **There are also functions for getting learners within time frames and tags. Each function has a variation to get all learners and only get active learners.**
 For example, if we wanted to get a list of learners who have the tag 'Laptop' we can add the following code: 
@@ -186,6 +190,8 @@ print("Earned a laptop, invited via DN:")
 print(len(dn_laptop_learners))
 export_learners_with_assessments_to_csv(dn_laptop_learners, 'laptop_DN.csv')
 ~~~
+
+### Additional Functionality 
 
 More functions are being added and tested. Each is documented for use. 
 <img width="852" alt="documentation for get_active_learners_by_invite_date_and_tags_excluding_tags" src="https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/d42f7c47-3998-493f-b4ac-69b22d034336">
