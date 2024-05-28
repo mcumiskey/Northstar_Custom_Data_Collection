@@ -9,14 +9,14 @@
 
 # Downloading the Project / File Structure 
 
-![image](https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/61691bca-e471-4ff5-8b48-0a220e33a5f4)
+![Guide to finding the Code download button](https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/61691bca-e471-4ff5-8b48-0a220e33a5f4)
 
 * Click on the [<> Code] button near the project name
 * Choose 'Download ZIP'
 * Make note of where you save the project
 * Unzip the files on your personal computer.
   
-![image](https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/32f127f9-f65b-403e-9b32-af4f231d3a11)
+![view of the files on mac when downloaded](https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/32f127f9-f65b-403e-9b32-af4f231d3a11)
 
 * The parent folder is named "Northstar_Custom_Data_Collection"
  * There are three example exports marked with "0_example_export_..."
@@ -31,18 +31,18 @@ All of the data is downloaded from Northstar: https://www.digitalliteracyassessm
 
 ## assessments.csv
 
-![image](https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/e355977f-5bc0-48a0-83c8-f975b688981f)
+![North Star Admin Portal Assesment Overview Page](https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/e355977f-5bc0-48a0-83c8-f975b688981f)
 
 * On the NSOL Admin portal, go to Assessments > View all Results
   
-![image](https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/cb85e2e6-aabd-4086-a6d1-f8457b4f6d18)
+![North Star Admin Portal All Assesments Page](https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/cb85e2e6-aabd-4086-a6d1-f8457b4f6d18)
 
 * Then click "Download all Results"
 * Save or move your file into the "Northstar_Custom_Data_Collection" folder, replacing the existing 'assessments.csv' 
 
 ## time-on-task-11686-all-time.xlsx
 
-![image](https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/9a00bf3c-56f3-451b-84f6-98a787c06ba9)
+![North Star Admin Portal Learners View Useage Amounts](https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/9a00bf3c-56f3-451b-84f6-98a787c06ba9)
 
 * On the NSOL Admin portal, go to Learners > View Useage Amounts
 * Then click "Download as Spreadsheet"
