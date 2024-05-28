@@ -28,7 +28,6 @@ class Learner:
     def __str__(self):
         return f"Learner ID: {self.learner_id}, Name: {self.name}, Email: {self.email}, Status: {self.status}, Location: {self.location}, Tags: {self.tags}, Assessments: {self.assessments}"
 
-
 class Assessment:
     def __init__(self, topic, start_date, duration, passed, proctored):
         self.topic = topic
@@ -203,23 +202,25 @@ def export_learners_with_assessments_to_csv(learners, filename):
     df = pd.DataFrame(learner_details)
     df.to_csv(filename, index=False)
 
-# Example usage:
+# Date range to filter 
 start_date = '2023-05-01'
 end_date = '2024-05-01'
 
-counter = 0
+#get_learners_by_invite_date returns a List of learners (both active and pending) who were invited to Northstar within the above date range. 
+#'start_date' and  'end_date' can also be replaced with dates in 'YYYY-MM-DD' format
 all_learners = get_learners_by_invite_date(start_date, end_date)
 print("All Learners:")
-for learner in all_learners:
-    counter+=1
-print(counter)
+#len gets the length of a list. 
+print(len(all_learners))
+#this function creates a CSV named '0_example_export_all_learners.csv' using the list all_learners 
 export_learners_with_assessments_to_csv(all_learners, '0_example_export_all_learners.csv')
 
-counter = 0
+#get_active_learners_by_invite_date returns a List of ACTIVE learners who were invited to Northstar within the above date range. 
+#'start_date' and 'end_date' can also be replaced with dates in 'YYYY-MM-DD' format
 active_learners = get_active_learners_by_invite_date(start_date, end_date)
 print("Active Learners:")
-for learner in active_learners:
-    counter+=1
-print(counter)
+#len gets the length of a list. 
+print(len(active_learners))
+#this function creates a CSV named '0_example_export_active_learners' using the list all_learners 
 export_learners_with_assessments_to_csv(active_learners, '0_example_export_active_learners.csv')
 
