@@ -187,4 +187,8 @@ print(len(dn_laptop_learners))
 export_learners_with_assessments_to_csv(dn_laptop_learners, 'laptop_DN.csv')
 ~~~
 
+More functions are being added and tested. Each is documented for use. 
+<img width="852" alt="documentation for get_active_learners_by_invite_date_and_tags_excluding_tags" src="https://github.com/mcumiskey/Northstar_Custom_Data_Collection/assets/29690717/d42f7c47-3998-493f-b4ac-69b22d034336">
+
+
 Created by Miles Cumiskey as part of a 2023-2024 Americorps VISTA Service Year.
