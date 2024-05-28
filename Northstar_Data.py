@@ -86,7 +86,7 @@ for learner in learners_dict.values():
 df = pd.DataFrame(learner_details)
 
 # Export the DataFrame to a CSV file
-df.to_csv('learner_details_with_assessments.csv', index = False)
+df.to_csv('0_example_export_learner_details_with_assessments.csv', index = False)
 
 def get_learners_by_invite_date(start_date, end_date):
     """
@@ -208,13 +208,12 @@ start_date = '2023-05-01'
 end_date = '2024-05-01'
 
 counter = 0
-
 all_learners = get_learners_by_invite_date(start_date, end_date)
 print("All Learners:")
 for learner in all_learners:
     counter+=1
 print(counter)
-export_learners_with_assessments_to_csv(all_learners, 'all_learners.csv')
+export_learners_with_assessments_to_csv(all_learners, '0_example_export_all_learners.csv')
 
 counter = 0
 active_learners = get_active_learners_by_invite_date(start_date, end_date)
@@ -222,62 +221,5 @@ print("Active Learners:")
 for learner in active_learners:
     counter+=1
 print(counter)
-export_learners_with_assessments_to_csv(active_learners, 'active_learners.csv')
+export_learners_with_assessments_to_csv(active_learners, '0_example_export_active_learners.csv')
 
-counter = 0
-day_learners = get_active_learners_by_invite_date_and_tags(start_date, end_date, ['Day'])
-print("Day")
-for learner in day_learners:
-    counter+=1
-print(counter)
-export_learners_with_assessments_to_csv(day_learners, 'day_learners.csv')
-
-day_learners = get_active_learners_by_invite_date_and_tags(start_date, end_date, ['Night Class'])
-print("Night Class")
-for learner in day_learners:
-    counter+=1
-print(counter)
-export_learners_with_assessments_to_csv(day_learners, 'night_learners.csv')
-
-counter = 0
-laptop_learners = get_active_learners_by_invite_date_and_tags(start_date, end_date, ['Laptop'])
-print("Earned a laptop: (8 are transition pathways)")
-for learner in laptop_learners:
-    counter+=1
-print(counter)
-export_learners_with_assessments_to_csv(laptop_learners, 'laptop_learners.csv')
-
-counter = 0
-laptop_learners = get_active_learners_by_invite_date_and_tags(start_date, end_date, ['Laptop', 'Digital Navigator'])
-print("Earned a laptop, invited via DN:")
-for learner in laptop_learners:
-    counter+=1
-print(counter)
-export_learners_with_assessments_to_csv(laptop_learners, 'laptop_DN.csv')
-
-counter = 0
-laptop_learners = get_active_learners_by_invite_date_and_tags(start_date, end_date, ['Laptop', 'BFLC'])
-print("Earned a laptop, invited via BFLC:")
-for learner in laptop_learners:
-    # print(learner.name)
-    counter+=1
-print(counter)
-export_learners_with_assessments_to_csv(laptop_learners, 'laptop_BFLC.csv')
-
-counter = 0
-cert_learners = get_active_learners_by_invite_date_and_tags(start_date, end_date, ['Certified - 4'])
-print("4 Certified")
-for learner in cert_learners:
-    # print(learner.name)
-    counter+=1
-print(counter)
-export_learners_with_assessments_to_csv(cert_learners, '4cert.csv')
-
-counter = 0
-cert_learners = get_active_learners_by_invite_date_and_tags(start_date, end_date, ['Certified - 6'])
-print("6 Certified")
-for learner in cert_learners:
-    # print(learner.name)
-    counter+=1
-print(counter)
-export_learners_with_assessments_to_csv(cert_learners, '6cert.csv')
