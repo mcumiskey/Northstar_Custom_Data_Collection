@@ -130,7 +130,9 @@ You can define a custom date range on lines 206 and 207.
 
 ~~~ python
 #May 1st 2023 - May 1st 2024
+
 start_date = '2023-05-01'
+
 end_date = '2024-05-01'
 ~~~
 
@@ -142,10 +144,13 @@ Getting all of the learners invited within a time frame can be done as follows:
 ~~~ python
 #get_learners_by_invite_date returns a List of learners (both active and pending) who were invited to Northstar within the above date range. 'start_date' and  'end_date' can also be replaced with dates in 'YYYY-MM-DD' format
 all_learners = get_learners_by_invite_date(start_date, end_date)
+
 print("All Learners:")
-#len gets the length of a list. 
+
+#len gets the length of a list.
 print(len(all_learners))
-#this function creates a CSV named '0_example_export_all_learners.csv' using the list all_learners 
+
+#this function creates a CSV named '0_example_export_all_learners.csv' using the list all_learners
 export_learners_with_assessments_to_csv(all_learners, '0_example_export_all_learners.csv')
 ~~~
 
@@ -161,9 +166,11 @@ Getting all of the active learners is very similar. We just used the get_active_
 #get_active_learners_by_invite_date returns a List of ACTIVE learners who were invited to Northstar within the above date range. 
 #'start_date' and 'end_date' can also be replaced with dates in 'YYYY-MM-DD' format
 active_learners = get_active_learners_by_invite_date(start_date, end_date)
+
 print("Active Learners:")
 #len gets the length of a list. 
 print(len(active_learners))
+
 #this function creates a CSV named '0_example_export_active_learners' using the list active_learners
 export_learners_with_assessments_to_csv(active_learners, '0_example_export_active_learners.csv')
 ~~~
@@ -176,8 +183,10 @@ For example, if we wanted to get a list of learners who have the tag 'Laptop' we
 ~~~ python
 #get_active_learners_by_invite_date_and_tags returns a List of ACTIVE learners who were invited to Northstar within the date range and have specific tags.  
 laptop_learners = get_active_learners_by_invite_date_and_tags(start_date, end_date, ['Laptop'])
+
 print("Number of active learners who earned a laptop:")
 print(len(laptop_learners))
+
 export_learners_with_assessments_to_csv(laptop_learners, 'laptop_learners.csv')
 ~~~
 
@@ -186,8 +195,10 @@ We can also get lists of people with multiple tags, such as 'Laptop' and 'Digita
 ~~~ python
 #We can use the get_active_learners_by_invite_date_and_tags function again, just adding more tags in the square brackets [] seperated by a comma. 
 dn_laptop_learners = get_active_learners_by_invite_date_and_tags(start_date, end_date, ['Laptop', 'Digital Navigator'])
+
 print("Earned a laptop, invited via DN:")
 print(len(dn_laptop_learners))
+
 export_learners_with_assessments_to_csv(dn_laptop_learners, 'laptop_DN.csv')
 ~~~
 
